@@ -34,7 +34,7 @@ class ImportController extends Controller
 
     	foreach (array_slice($allFilesPaths, 0, 1) as $file) {
     		$data = array_map('str_getcsv', file($file));
-    		dd($data);
+    		
     		foreach ($data as $row) {
     			User::create([
     				'first_name' => $row[0],
